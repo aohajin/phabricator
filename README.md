@@ -4,9 +4,11 @@ This is a Docker image which provides a fully configured Phabricator image, incl
 
 ## Some fix from aohajin
 
-Fix APCu and Pygmentize configuration.
+Forked from redpointgames/phabricator, fix APCu and Pygmentize configuration.
 
-# Most basic instruction
+This can also be found on dockerhub: aohajin/phabricator
+
+## Most basic instruction
 
 You'll need an instance of MySQL for this Docker image to connect to, and for basic setups you can specify it with either the `MYSQL_LINKED_CONTAINER` or `MYSQL_HOST` environment variables, depending on where your instance of MySQL is.
 
@@ -21,7 +23,7 @@ docker run \
     --env MYSQL_PASS=pass \
     --env PHABRICATOR_REPOSITORY_PATH=/repos \
     -v /host/repo/path:/repos \
-    redpointgames/phabricator
+    aohajin/phabricator
 ```
 
 Alternatively you can launch this image with Docker Compose. Refer to [Using Docker Compose](./DOCKER-COMPOSE.md) for more information.
