@@ -58,3 +58,8 @@ chown root:root /etc/phabricator-ssh/*
 chmod u+s /usr/sbin/postdrop
 chmod u+s /usr/sbin/postqueue
 
+# add by adam@xiimoon
+# some stuff
+zypper --gpg-auto-import-keys --non-interactive in python-pip
+# Install pygmentize
+pip install Pygments
