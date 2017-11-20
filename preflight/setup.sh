@@ -61,6 +61,6 @@ chmod u+s /usr/sbin/postqueue
 
 # add by adam@xiimoon
 # some stuff
-zypper --gpg-auto-import-keys --non-interactive in python-pip
+# zypper --gpg-auto-import-keys --non-interactive in python-pip
 # Install pygmentize
-pip install Pygments
+# pip install Pygments
