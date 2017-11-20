@@ -12,6 +12,7 @@ if [ ! -f /is-baking ]; then
 
   # Start the Phabricator daemons
   pushd /srv/phabricator/phabricator
+  sudo -u "$PHABRICATOR_VCS_USER" bin/storage upgrade
   sudo -u "$PHABRICATOR_VCS_USER" bin/phd restart --force
   sudo -u "$PHABRICATOR_VCS_USER" bin/config set load-libraries '{"sprint":"/srv/phabricator/libext/sprint/src"}'
 
