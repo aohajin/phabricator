@@ -4,10 +4,10 @@ set -e
 set -x
 
 # Add repositories
-zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/php/openSUSE_Leap_42.1/ php
-zypper --non-interactive ar http://download.opensuse.org/repositories/server:/php:/extensions/php_openSUSE_Leap_42.1/ php-ext
-zypper --non-interactive ar http://download.opensuse.org/repositories/home:/marec2000:/nodejs/openSUSE_Leap_42.1/ nodejs
-zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/python/openSUSE_Leap_42.1/ python
+zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/php/openSUSE_Leap_42.3/ php
+zypper --non-interactive ar http://download.opensuse.org/repositories/server:/php:/extensions/php_openSUSE_Leap_42.3/ php-ext
+zypper --non-interactive ar http://download.opensuse.org/repositories/home:/marec2000:/nodejs/openSUSE_Leap_42.3/ nodejs
+zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/python/openSUSE_Leap_42.3/ python
 
 # Install Git before we add the SCM repository (the SCM repository contains Git 2.11, which is broken).
 zypper --gpg-auto-import-keys --non-interactive in --force-resolution git
@@ -23,10 +23,10 @@ if [ "$(git --version)" == *"2.11"* ]; then
 fi
 
 # Add SCM package for other tools (Subversion, Mercurial)...
-zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/tools:/scm/openSUSE_Leap_42.1/ scm
+zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/tools:/scm/openSUSE_Leap_42.3/ scm
 
 # Install requirements
-zypper --gpg-auto-import-keys --non-interactive in --force-resolution nginx php-fpm php5-mbstring php5-mysql php5-curl php5-pcntl php5-gd php5-openssl php5-ldap php5-fileinfo php5-posix php5-json php5-iconv php5-ctype php5-zip php5-sockets which nodejs ca-certificates ca-certificates-mozilla ca-certificates-cacert sudo subversion mercurial php5-xmlwriter nodejs-ws php5-opcache ImageMagick postfix glibc-locale supervisor php5-APCu
+zypper --gpg-auto-import-keys --non-interactive in --force-resolution nginx php-fpm php5-mbstring php5-mysql php5-curl php5-pcntl php5-gd php5-openssl php5-ldap php5-fileinfo php5-posix php5-json php5-iconv php5-ctype php5-zip php5-sockets which python3-Pygments nodejs ca-certificates ca-certificates-mozilla ca-certificates-cacert sudo subversion mercurial php5-xmlwriter nodejs-ws php5-opcache ImageMagick postfix glibc-locale supervisor php5-APCu
 
 # Build and install APCu
 zypper --non-interactive install --force-resolution autoconf automake binutils cpp cpp48 gcc gcc48 glibc-devel libasan0 libatomic1 libcloog-isl4 libgomp1 libisl10 libitm1 libltdl7 libmpc3 libmpfr4 libpcre16-0 libpcrecpp0 libpcreposix0 libstdc++-devel libstdc++48-devel libtool libtsan0 libxml2-devel libxml2-tools linux-glibc-devel m4 make ncurses-devel pcre-devel php5-devel php5-pear php5-zlib pkg-config readline-devel tack xz-devel zlib-devel

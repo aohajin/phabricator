@@ -12,7 +12,7 @@ if [ ! -f /is-baking ]; then
 
   # Start the Phabricator daemons
   pushd /srv/phabricator/phabricator
-  sudo -u "$PHABRICATOR_VCS_USER" bin/phd start
+  sudo -u "$PHABRICATOR_VCS_USER" bin/phd restart --force
   sudo -u "$PHABRICATOR_VCS_USER" bin/config set load-libraries '{"sprint":"/srv/phabricator/libext/sprint/src"}'
 
   if [ "$SCRIPT_AFTER_DAEMONS" != "" ]; then
@@ -20,6 +20,19 @@ if [ ! -f /is-baking ]; then
     $SCRIPT_AFTER_DAEMONS
     popd
   fi
+
+  # Sleep while daemons are running.
+  set +e
+  while [ 0 -eq 0 ]; do
+    TEMP=$(ps aux)
+    if [ "$(echo $TEMP | awk '/phd-daemon/{print $2}')" == "" ]; then
+      echo "Detected daemons stopped running!"
+      break
+    else
+      sleep 1000
+    fi
+  done
+  set -e
 
   popd
 fi
