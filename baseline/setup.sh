@@ -5,23 +5,19 @@ set -x
 
 # Add repositories
 zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/php/openSUSE_Leap_42.3/ php
-zypper --non-interactive ar http://download.opensuse.org/repositories/server:/php:/extensions/php_openSUSE_Leap_42.3/ php-ext
 zypper --non-interactive ar http://download.opensuse.org/repositories/home:/marec2000:/nodejs/openSUSE_Leap_42.3/ nodejs
 zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/python/openSUSE_Leap_42.3/ python
 
 # Install Git before we add the SCM repository (the SCM repository contains Git 2.11, which is broken).
 zypper --gpg-auto-import-keys --non-interactive in --force-resolution git
-
 # Lock the git package to the current version
 zypper --non-interactive al git
-
 # Test to make sure we're not running Git 2.11, otherwise, abort the image bake right now (this prevents
 # bad images from being pushed to the index).
 if [ "$(git --version)" == *"2.11"* ]; then
   echo "Bad version of Git detected: $(git --version).  Aborting image creation!"
   exit 1
 fi
-
 # Add SCM package for other tools (Subversion, Mercurial)...
 zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/tools:/scm/openSUSE_Leap_42.3/ scm
 
