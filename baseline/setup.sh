@@ -36,6 +36,8 @@ printf "\n" | pecl install apcu-4.0.10
 # Remove cached things that pecl left in /tmp/
 rm -rf /tmp/*
 
+zypper in openssh
+
 # Install a few extra things
 zypper --non-interactive install --force-resolution mariadb-client vim vim-data
 
