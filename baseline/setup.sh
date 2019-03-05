@@ -4,6 +4,7 @@ set -e
 set -x
 
 # Add repositories
+zypper --non-interactive ar https://download.opensuse.org/distribution/leap/42.3/repo/oss/suse/ suse
 zypper --non-interactive ar https://download.opensuse.org/update/leap/42.3/oss/ leap
 #zypper --non-interactive ar https://download.opensuse.org/repositories/network:/ha-clustering:/Factory/openSUSE_Tumbleweed/ nodejs
 #zypper --non-interactive ar https://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Tumbleweed/ nodejs-ws
