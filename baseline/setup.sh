@@ -5,7 +5,7 @@ set -x
 
 # Add repositories
 zypper --non-interactive ar https://download.opensuse.org/update/leap/42.3/oss/ leap
-zypper --non-interactive ar https://download.opensuse.org/repositories/OBS:/Server:/2.8/openSUSE_42.3/ nodejs
+zypper --non-interactive ar https://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Tumbleweed/ nodejs
 #zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/python/openSUSE_Leap_42.3/ python
 
 # Install Git before we add the SCM repository (the SCM repository contains Git 2.11, which is broken).
@@ -39,6 +39,9 @@ zypper --non-interactive install --force-resolution mariadb-client vim vim-data
 
 # Force reinstall cronie
 zypper --non-interactive install -f cronie
+
+# try this
+npm install ws
 
 # Create users and groups
 echo "nginx:x:497:495:user for nginx:/var/lib/nginx:/bin/false" >> /etc/passwd
