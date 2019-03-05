@@ -1,4 +1,4 @@
-FROM opensuse:42.3
+FROM opensuse/tumbleweed:latest
 
 EXPOSE 80 443 22 24
 COPY baseline /baseline
