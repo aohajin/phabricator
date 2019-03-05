@@ -4,8 +4,8 @@ set -e
 set -x
 
 # Add repositories
-zypper --non-interactive ar https://download.opensuse.org/repositories/devel:/languages:/php/openSUSE_Factory/ php
-zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Tumbleweed/ nodejs
+zypper --non-interactive ar https://download.opensuse.org/update/leap/42.3/oss/ leap
+#zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Tumbleweed/ nodejs
 #zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/python/openSUSE_Leap_42.3/ python
 
 # Install Git before we add the SCM repository (the SCM repository contains Git 2.11, which is broken).
