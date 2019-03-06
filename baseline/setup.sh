@@ -7,7 +7,7 @@ set -x
 # zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/php/openSUSE_Leap_15.0/ php
 zypper --non-interactive ar https://download.opensuse.org/update/leap/42.3/oss/ update
 zypper --non-interactive ar https://download.opensuse.org/update/leap/15.1/oss/ updata1
-#zypper --non-interactive ar https://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_42.3/ nodejs
+zypper --non-interactive ar https://download.opensuse.org/distribution/leap/42.3/repo/oss/suse/ leap423
 zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/python/openSUSE_Leap_15.0/ python
 
 # Install Git before we add the SCM repository (the SCM repository contains Git 2.11, which is broken).
