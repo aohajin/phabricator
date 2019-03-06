@@ -4,7 +4,8 @@ set -e
 set -x
 
 # Add repositories
-zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/php/openSUSE_Leap_15.0/ php
+# zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/php/openSUSE_Leap_15.0/ php
+zypper --non-interactive ar https://download.opensuse.org/update/leap/42.3/oss/ update
 #zypper --non-interactive ar http://download.opensuse.org/repositories/home:/marec2000:/nodejs/openSUSE_Leap_15.0/ nodejs
 zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/python/openSUSE_Leap_15.0/ python
 
