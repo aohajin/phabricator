@@ -14,7 +14,7 @@ zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/lan
 zypper --gpg-auto-import-keys --non-interactive in --force-resolution git
 
 # Lock the git package to the current version
-zypper --non-interactive al git
+# zypper --non-interactive al git
 
 # Add SCM package for other tools (Subversion, Mercurial)...
 # zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/tools:/scm/openSUSE_Leap_42.3/ scm
