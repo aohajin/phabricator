@@ -20,7 +20,7 @@ zypper --gpg-auto-import-keys --non-interactive in --force-resolution git
 # zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/tools:/scm/openSUSE_Leap_42.3/ scm
 
 # nginx from openSUSE-Leap-42.3-Update-Oss conflict with git, so use specificly Leap-15.0-Oss version
-zypper --gpg-auto-import-keys --non-interactive in --force-resolution --repo repo-oss nginx
+zypper --gpg-auto-import-keys --non-interactive in --force-resolution --repo repo-oss nginx augeas-lenses
 # Install requirements
 zypper --gpg-auto-import-keys --non-interactive in --force-resolution php5-fpm php5-mbstring php5-mysql php5-curl php5-pcntl php5-gd php5-openssl php5-ldap php5-fileinfo php5-posix php5-json php5-iconv php5-ctype php5-zip php5-sockets which nodejs8 ca-certificates ca-certificates-mozilla ca-certificates-cacert sudo subversion mercurial php5-xmlwriter php5-opcache ImageMagick postfix glibc-locale
 
