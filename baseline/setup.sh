@@ -61,7 +61,6 @@ sudo -u PHABRICATOR git clone https://github.com/phacility/libphutil.git /srv/ph
 sudo -u PHABRICATOR git clone https://github.com/phacility/arcanist.git /srv/phabricator/arcanist
 sudo -u PHABRICATOR git clone https://github.com/phacility/phabricator.git /srv/phabricator/phabricator
 sudo -u PHABRICATOR git clone https://github.com/PHPOffice/PHPExcel.git /srv/phabricator/PHPExcel
-sudo -u PHABRICATOR git clone https://github.com/wikimedia/phabricator-extensions-Sprint.git /srv/phabricator/libext/sprint
 cd /
 
 # nodejs ws for aphlict
