@@ -4,9 +4,12 @@ This is a Docker image which provides a fully configured Phabricator image, incl
 
 ## Some fix from aohajin
 
-Forked from redpointgames/phabricator, fix APCu and Pygmentize configuration.
+Forked from redpointgames/phabricator.
+* Ported to OpenSuse Leap 15.0
+* Use PHP7
+* Fix APCu and Pygmentize configuration.
 
-This can also be found on dockerhub: aohajin/phabricator
+This can also be found on dockerhub: xiimoon/phabricator
 
 ## Most basic instruction
 
@@ -23,7 +26,7 @@ docker run \
     --env MYSQL_PASS=pass \
     --env PHABRICATOR_REPOSITORY_PATH=/repos \
     -v /host/repo/path:/repos \
-    aohajin/phabricator
+    xiimoon/phabricator
 ```
 
 Alternatively you can launch this image with Docker Compose. Refer to [Using Docker Compose](https://github.com/RedpointGames/phabricator/blob/master/DOCKER-COMPOSE.md) for more information.
