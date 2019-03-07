@@ -26,6 +26,9 @@ zypper --gpg-auto-import-keys --non-interactive in --force-resolution php7-fpm p
 
 # Build and install APCu
 zypper --non-interactive install --force-resolution autoconf automake binutils cpp gcc glibc-devel libatomic1 libgomp1 libitm1 libltdl7 libmpc3 libpcre16-0 libpcrecpp0 libpcreposix0 libstdc++-devel libtool libtsan0 libxml2-devel libxml2-tools linux-glibc-devel m4 make ncurses-devel pcre-devel php7-devel php7-pear php7-zlib pkg-config readline-devel tack xz-devel zlib-devel
+
+# fix pecl call php bug. pecl use php -n, without reading php.ini and ssl not supported wtf
+sed -i 's|$PHP -C -n -q |$PHP -C -q |' /usr/bin/pecl
 printf "\n" | pecl install apcu
 
 # Remove cached things that pecl left in /tmp/
