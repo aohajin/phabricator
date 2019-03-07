@@ -26,7 +26,7 @@ zypper --gpg-auto-import-keys --non-interactive in --force-resolution php7-fpm p
 
 # Build and install APCu
 zypper --non-interactive install --force-resolution autoconf automake binutils cpp gcc glibc-devel libatomic1 libgomp1 libitm1 libltdl7 libmpc3 libpcre16-0 libpcrecpp0 libpcreposix0 libstdc++-devel libtool libtsan0 libxml2-devel libxml2-tools linux-glibc-devel m4 make ncurses-devel pcre-devel php7-devel php7-pear php7-zlib pkg-config readline-devel tack xz-devel zlib-devel
-printf "\n" | pecl install apcu-4.0.10
+printf "\n" | pecl install apcu
 
 # Remove cached things that pecl left in /tmp/
 rm -rf /tmp/*
