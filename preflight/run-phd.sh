@@ -14,7 +14,7 @@ if [ ! -f /is-baking ]; then
   pushd /srv/phabricator/phabricator
   sudo -u "$PHABRICATOR_VCS_USER" bin/storage upgrade
   sudo -u "$PHABRICATOR_VCS_USER" bin/phd restart --force
-  sudo -u "$PHABRICATOR_VCS_USER" bin/config set load-libraries '{"sprint":"/srv/phabricator/libext/sprint/src"}'
+  #sudo -u "$PHABRICATOR_VCS_USER" bin/config set load-libraries '{"sprint":"/srv/phabricator/libext/sprint/src"}'
 
   if [ "$SCRIPT_AFTER_DAEMONS" != "" ]; then
     pushd /srv/phabricator/phabricator
