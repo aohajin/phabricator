@@ -25,7 +25,7 @@ zypper --gpg-auto-import-keys --non-interactive in --force-resolution --repo rep
 zypper --gpg-auto-import-keys --non-interactive in --force-resolution php7-fpm php7-mbstring php7-mysql php7-curl php7-pcntl php7-gd php7-openssl php7-ldap php7-fileinfo php7-posix php7-json php7-iconv php7-ctype php7-zip php7-sockets which nodejs8 npm ca-certificates ca-certificates-mozilla ca-certificates-cacert sudo subversion mercurial php7-xmlwriter php7-opcache ImageMagick postfix glibc-locale
 
 # Build and install APCu
-zypper --non-interactive install --force-resolution autoconf automake binutils cpp gcc glibc-devel libasan0 libatomic1 libgomp1 libitm1 libltdl7 libmpc3 libpcre16-0 libpcrecpp0 libpcreposix0 libstdc++-devel libstdc++48-devel libtool libtsan0 libxml2-devel libxml2-tools linux-glibc-devel m4 make ncurses-devel pcre-devel php7-devel php7-pear php7-zlib pkg-config readline-devel tack xz-devel zlib-devel
+zypper --non-interactive install --force-resolution autoconf automake binutils cpp gcc glibc-devel libatomic1 libgomp1 libitm1 libltdl7 libmpc3 libpcre16-0 libpcrecpp0 libpcreposix0 libstdc++-devel libtool libtsan0 libxml2-devel libxml2-tools linux-glibc-devel m4 make ncurses-devel pcre-devel php7-devel php7-pear php7-zlib pkg-config readline-devel tack xz-devel zlib-devel
 printf "\n" | pecl install apcu-4.0.10
 
 # Remove cached things that pecl left in /tmp/
