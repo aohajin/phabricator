@@ -1,4 +1,4 @@
-FROM opensuse/leap:15.0
+FROM opensuse/leap:15.1
 
 EXPOSE 80 443 22 24
 COPY baseline /baseline

@@ -7,8 +7,8 @@ set -x
 # zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/php/openSUSE_Leap_15.0/ php
 #zypper --non-interactive ar https://download.opensuse.org/update/leap/42.3/oss/ openSUSE-Leap-42.3-Update-Oss
 zypper --non-interactive ar https://download.opensuse.org/update/leap/15.1/oss/ openSUSE-Leap-15.1-Update-Oss
-zypper --non-interactive ar https://download.opensuse.org/repositories/devel:/libraries:/c_c++/openSUSE_Leap_15.0/ c_c++_opensuse_leap_15.0
-zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/python/openSUSE_Leap_15.0/ python
+zypper --non-interactive ar https://download.opensuse.org/repositories/devel:/libraries:/c_c++/openSUSE_Leap_15.1/ c_c++_opensuse_leap_15.0
+zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/python/openSUSE_Leap_15.1/ python
 
 # Install Git before we add the SCM repository (the SCM repository contains Git 2.11, which is broken).
 zypper --gpg-auto-import-keys --non-interactive in --force-resolution git
