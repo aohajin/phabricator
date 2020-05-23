@@ -29,7 +29,7 @@ mv 15-https-conf /app/startup/15-https-conf
 mv php-fpm.conf /etc/php7/fpm/php-fpm.conf.template
 mv php.ini /etc/php7/fpm/php.ini
 
-mv supervisord.conf /app/supervisord.conf
+#mv supervisord.conf /app/supervisord.conf
 mv init.sh /app/init.sh
 
 mkdir -pv /run/watch
