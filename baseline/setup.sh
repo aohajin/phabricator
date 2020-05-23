@@ -69,7 +69,7 @@ cd /usr/lib/
 npm install ws
 
 # Clone Let's Encrypt
-git clone https://github.com/letsencrypt/letsencrypt /srv/letsencrypt
-cd /srv/letsencrypt
-./letsencrypt-auto-source/letsencrypt-auto --help
+#git clone https://github.com/letsencrypt/letsencrypt /srv/letsencrypt
+#cd /srv/letsencrypt
+#./letsencrypt-auto-source/letsencrypt-auto --help
 cd /
