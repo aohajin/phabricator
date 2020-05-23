@@ -6,6 +6,7 @@ set -x
 # Add repositories
 # zypper --non-interactive ar http://download.opensuse.org/repositories/devel:/languages:/php/openSUSE_Leap_15.0/ php
 #zypper --non-interactive ar https://download.opensuse.org/update/leap/42.3/oss/ openSUSE-Leap-42.3-Update-Oss
+zypper --non-interactive ar http://download.opensuse.org/ports/update/leap/15.1/ opensuse-leap-15.1-ports-update
 zypper --non-interactive ar http://download.opensuse.org/distribution/leap/15.1/repo/oss/ openSUSE-Leap-15.1-repo-oss
 zypper --non-interactive ar https://download.opensuse.org/update/leap/15.1/oss/ openSUSE-Leap-15.1-Update-Oss
 zypper --non-interactive ar https://download.opensuse.org/repositories/devel:/libraries:/c_c++/openSUSE_Leap_15.1/ c_c++_opensuse_leap_15.0
@@ -42,7 +43,7 @@ zypper --non-interactive install -f cronie
 
 # add by adam@xiimoon
 # some stuff
-zypper --gpg-auto-import-keys --non-interactive in python3-pygments
+zypper --gpg-auto-import-keys --non-interactive in python3-pygments supervisor
 # pip install --upgrade pip
 # pip install pygments
 # pip install supervisor
